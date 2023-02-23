@@ -1,0 +1,18 @@
+<section id="portfolio" class="paddsection">
+    <article class="container">
+        <h2 class="section-title text-center">Mi Portafolio</h2>
+    </article>
+    <section class="container">
+        <section class="row">
+            <article class="col-lg-12 d-flex justify-content-center">
+            <ul id="portfolio-flters">
+                <li data-filter="*" class="filter-active">All</li>
+                {{macros.render_list__menu_works(json.works)}}
+            </ul>
+            </article>
+        </section>
+        <section class="row portfolio-container">
+            {{macros.render_list_works(json.works)}}
+        </section>
+    </section>
+</section>

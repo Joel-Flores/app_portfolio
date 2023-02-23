@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+<!-- For resposive -->
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>{% block title %}Joel Flores|{% endblock %}</title>
+    <meta content="Portafolio personal" name="description" />
+<!-- Icon -->
+    <link rel="icon" type="images/png" href="{{url_for('static', filename='images/icon.png')}}" />
+<!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,500,500i,600,600i,700,700i|Playfair+Display:400,400i,500,500i,600,600i,700,700i,900,900i" rel="stylesheet"/>
+<!-- CSS Files -->
+    <link href="{{url_for('static', filename='framework/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet" />
+    <link href="{{url_for('static', filename='framework/bootstrap-icons/bootstrap-icons.css')}}" rel="stylesheet"/>
+    <link href="{{url_for('static', filename='framework/boxicons/css/boxicons.min.css')}}" rel="stylesheet" />
+    <link href="{{url_for('static', filename='framework/glightbox/css/glightbox.min.css')}}" rel="stylesheet" />
+    <link href="{{url_for('static', filename='framework/swiper/swiper-bundle.min.css')}}" rel="stylesheet" />
+<!-- CSS Manjor -->
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}" />
+</head>
+<body>
+{% with messages = get_flashed_messages() %}
+{% if messages %}
+{% for message in messages %}
+    <div class="alert alert-light alert-dismissible fade show" role="alert">
+        <strong>{{message}}</strong>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+{% endfor %}
+{% endif %}
+{% endwith %}
+
+{% import 'macros.html' as macros %}
+
+{%block main%} {%endblock%}
+
+<!-- ======= Contact Section ======= -->
+{% include 'contact.html' %}
+<!-- ======= Footer ======= -->
+{% include 'footer.html'%}
+
+    <a
+        href="#"
+        class="back-to-top d-flex align-items-center justify-content-center"
+        ><i class="bi bi-arrow-up-short"></i
+    ></a>
+<!-- JS Files -->
+    <script src="{{url_for('static', filename='framework/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+    <script src="{{url_for('static', filename='framework/glightbox/js/glightbox.min.js')}}"></script>
+    <script src="{{url_for('static', filename='framework/isotope-layout/isotope.pkgd.min.js')}}"></script>
+    <script src="{{url_for('static', filename='framework/swiper/swiper-bundle.min.js')}}"></script>
+    <script src="{{url_for('static', filename='framework/typed.js/typed.min.js')}}"></script>
+    <script src="{{url_for('static', filename='js/validate.js')}}"></script>
+
+<!-- JS Manjor -->
+    <script src="{{url_for('static', filename='js/main.js')}}"></script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block title %}{{super()}}Portfolio{% endblock %}
+{%block main%}
+<!-- ======= Header ======= -->
+{% include 'principal/header.html' %}
+<main>
+<!-- ======= Hero ======= -->
+{% include 'principal/hero.html' %}
+<!-- ======= About ======= -->
+{% include 'principal/about.html' %}
+<!-- ======= Services ======= -->
+{% include 'principal/services.html' %}
+<!-- ======= Portfolio ======= -->
+{% include 'principal/portfolio.html' %}
+<!-- ======= Journal Section ======= -->
+{% include 'principal/journal.html' %}
+</main>
+{%endblock%}

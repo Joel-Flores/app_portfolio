@@ -1,0 +1,86 @@
+{% macro render_list_profesion(profesiones) %}
+    {% for profesion in profesiones %}
+                {{profesion}},
+    {% endfor %}
+{% endmacro %}
+
+{% macro render_list_profesions(profesiones) %}
+            <p>    
+            {% for profesion in profesiones %}
+                {{profesion}}
+            {% endfor %}
+            </p>
+{% endmacro %}
+
+{% macro render_list_social_media(social_media) %}
+    {% for perfil in social_media %}
+                <li>
+                    <a href="{{perfil.link}}" target="_blank"><i class="bi bi-{{perfil.name}}"></i></a>
+                </li>
+    {% endfor %}
+{% endmacro %}
+
+{% macro render_description(description) %}
+                <p class="p-heading">{{description[0].title}}</p>
+                <p class="separator"><br>{{description[1].description}}</p>
+                <p class="separator">{{description[2].opcional_description}}</p>
+{% endmacro %}
+
+{% macro render_list_courses(courses) %}
+    {% for course in courses %}
+                <!-- courses item -->
+                <article class="swiper-slide">
+                    <div class="services-block">
+                    <i class="bi bi-{{course.icon}}"></i>
+                    <span><a href="{{course.link}}" target="_blank">{{course.name.upper()}}</a></span>
+                    </div>
+                </article>
+    {% endfor %}
+{% endmacro %}
+
+{% macro render_list__menu_works(works) %}
+    {% for work in works %}
+                <li data-filter=".filter-{{work.type}}">{{work.type}}</li>
+    {% endfor %}
+{% endmacro %}
+
+{% macro render_list_works(works) %}
+    {% for work in works %}
+            <article class="col-lg-4 col-md-6 portfolio-item filter-{{work.type}}">
+                <img src="../static/{{work.image}}" class="img-fluid" alt=""/>
+                <div class="portfolio-info">
+                    <h4>{{work.title}}</h4>
+                    <p>{{work.description}}</p>
+                    <a href="../static/{{work.image}}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="{{work.title}}"><i class="bx bx-plus"></i></a>
+                    <a href="{{work.link}}" class="details-link" title="More Details" ><i class="bx bx-link"></i ></a>
+                </div>
+            </article>
+    {% endfor %}
+{% endmacro %}
+
+{% macro render_list_journal(journals) %}
+    {% for journal in journals %}
+                <article class="col-lg-4 col-md-6">
+                    <div class="journal-info">
+                        <a href="/blog"><img src="./static/{{journal.image}}" class="img-responsive" alt="img"/></a>
+                        <div class="journal-txt">
+                            <h4 class="h4">
+                            <a href="/blog">{{journal.title}}</a>
+                            </h4>
+                            <p class="separator">{{journal.concept}}</p>
+                        </div>
+                    </div>
+                </article>
+    {% endfor %}
+{% endmacro %}
+<div class="journal-info">
+    <a href="blog-single.html"><img src="{{url_for('static', filename='assets/img/blog-post-1.jpg')}}" class="img-responsive" alt="img"/></a>
+    <div class="journal-txt">
+        <h4 class="h4">
+        <a href="blog-single.html">TRAVELS</a>
+        </h4>
+        <p class="separator">
+        The world is like a book, and who does not travel, only reads a page
+        </p>
+    </div>
+</div>
