@@ -1,13 +1,17 @@
+{% macro render_name(full_name) %}
+{{full_name.nombre.capitalize()}} {{full_name.apellido.capitalize()}}
+{% endmacro%}
+
 {% macro render_list_profesion(profesiones) %}
     {% for profesion in profesiones %}
-                {{profesion}},
+                {{profesion.profesion}},
     {% endfor %}
 {% endmacro %}
 
 {% macro render_list_profesions(profesiones) %}
             <p>    
             {% for profesion in profesiones %}
-                {{profesion}}
+                {{profesion.profesion}}
             {% endfor %}
             </p>
 {% endmacro %}

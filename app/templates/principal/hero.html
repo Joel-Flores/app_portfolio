@@ -2,7 +2,7 @@
     <div class="container">
         <div class="hero-content">
             <h1>Soy
-                <span class="typed" data-typed-items="{{json.name}},{{macros.render_list_profesion(json.profesiones)}}"></span>
+                <span class="typed" data-typed-items="{{macros.render_name(json.name)}},{{macros.render_list_profesion(json.profesiones)}}"></span>
             </h1>
             {{macros.render_list_profesions(json.profesiones)}}
             <ul class="list-unstyled list-social">
