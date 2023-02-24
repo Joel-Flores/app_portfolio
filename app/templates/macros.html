@@ -25,9 +25,9 @@
 {% endmacro %}
 
 {% macro render_description(description) %}
-                <p class="p-heading">{{description[0].title}}</p>
-                <p class="separator"><br>{{description[1].description}}</p>
-                <p class="separator">{{description[2].opcional_description}}</p>
+                <p class="p-heading">{{description.titulo}}</p>
+                <p class="separator"><br>{{description.descripcion}}</p>
+                <p class="separator">{{description.opcional_descripcion}}</p>
 {% endmacro %}
 
 {% macro render_list_courses(courses) %}

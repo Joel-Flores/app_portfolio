@@ -1,6 +1,6 @@
-from . import full_name as f
+from . import full_name as f, descripcion as d
 def details_portfolio():
     json = dict()
     json['name'] = f.data()
-    print(json)
+    json['descriptions'] = d.data()
     return json
