@@ -35,8 +35,10 @@
                 <!-- courses item -->
                 <article class="swiper-slide">
                     <div class="services-block">
-                    <i class="bi bi-{{course.icon}}"></i>
-                    <span><a href="{{course.link}}" target="_blank">{{course.name.upper()}}</a></span>
+                    <span>
+                        <a href="{{course.url}}" target="_blank"><img src="{{url_for ('static', filename = course.icono_ruta)}}" alt=""></a>
+                    </span>
+                    <p>{{course.nombre.capitalize()}}</p>
                     </div>
                 </article>
     {% endfor %}
