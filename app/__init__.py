@@ -2,7 +2,7 @@ import code
 from flask import Flask
 import os
 
-
+from .auth import auth
 from app.db import init_db_command
 
 def create_app():
@@ -16,5 +16,7 @@ def create_app():
     )
     
     app.cli.add_command(init_db_command)
+    
+    app.register_blueprint(auth)
         
     return app
