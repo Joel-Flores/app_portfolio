@@ -46,19 +46,19 @@
 
 {% macro render_list__menu_works(works) %}
     {% for work in works %}
-                <li data-filter=".filter-{{work.type}}">{{work.type}}</li>
+                <li data-filter=".filter-{{work.tipo}}">{{work.tipo}}</li>
     {% endfor %}
 {% endmacro %}
 
 {% macro render_list_works(works) %}
     {% for work in works %}
-            <article class="col-lg-4 col-md-6 portfolio-item filter-{{work.type}}">
-                <img src="../static/{{work.image}}" class="img-fluid" alt=""/>
+            <article class="col-lg-4 col-md-6 portfolio-item filter-{{work.tipo}}">
+                <img src="{{url_for ('static', filename = work.archivos)}}" class="img-fluid" alt=""/>
                 <div class="portfolio-info">
-                    <h4>{{work.title}}</h4>
-                    <p>{{work.description}}</p>
-                    <a href="../static/{{work.image}}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="{{work.title}}"><i class="bx bx-plus"></i></a>
-                    <a href="{{work.link}}" class="details-link" title="More Details" ><i class="bx bx-link"></i ></a>
+                    <h4>{{work.titulo}}</h4>
+                    <p>{{work.descripcion}}</p>
+                    <a href="{{url_for ('static', filename = work.archivos)}}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="{{work.titulo}}"><i class="bx bx-plus"></i></a>
+                    <a href="{{work.url_proyecto}}" class="details-link" title="More Details" ><i class="bx bx-link"></i ></a>
                 </div>
             </article>
     {% endfor %}
