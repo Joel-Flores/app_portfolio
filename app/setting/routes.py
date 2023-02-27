@@ -1,6 +1,6 @@
 from . import setting
 from flask import render_template, url_for, redirect
-from . import route_images
+from . import route_images, route_profesion
 
 @setting.route('/')
 def index():
@@ -13,6 +13,7 @@ def images():
 
 @setting.route('/profesion', methods = ['POST'])
 def profesion():
+    route_profesion.function()
     return redirect(url_for('setting.index'))
 
 @setting.route('/description', methods = ['POST'])
