@@ -19,6 +19,7 @@ def blogs():
 @app.route('/')
 def index():
     data = details_portfolio()
+    return data
     return render_template('principal/index.html', json = data)
     
 

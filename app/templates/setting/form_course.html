@@ -1,0 +1,18 @@
+<form action="upload.php" method="POST" enctype="multipart/form-data">
+  
+  <div class="form-floating mb-3  m-2">
+    <label for="nombre">Titulo del curso</label>
+    <input type="text" class="form-control" id="nombre" name="titulo" required>
+  </div>
+
+  <div class="form-floating m-2">
+    <label for="descripcion">Enlace del Curso</label>
+    <textarea class="form-control" id="descripcion" name="descripcion" rows="3" required></textarea>
+  </div>
+  
+  <div class="mb-3 m-2">
+    <label for="svgFile" class="form-label" >Select an SVG file:</label>
+    <input type="file" class="form-control" id="svgFile" name="svgFile" accept="image/svg+xml" required>
+  </div>
+  <button type="submit" class="btn btn-primary">Upload</button>
+</form>

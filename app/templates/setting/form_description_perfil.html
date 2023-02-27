@@ -1,0 +1,20 @@
+<form action="/prueba" method="POST" enctype="multipart/form-data">
+
+    <div class="form-floating mb-3  m-2">
+        <label for="nombre">Titulo de la description</label>
+        <input type="text" class="form-control" id="nombre" name="titulo" required>
+    </div>
+
+    <div class="form-floating mb-3  m-2">
+        <label for="email">Parrafo principal</label>
+        <input type="email" class="form-control" id="email" name="enlace" required>
+    </div>
+
+    <div class="form-floating mb-3  m-2">
+        <label for="mensaje">Parrafo "Opcional"</label>
+        <textarea class="form-control" id="mensaje" name="description" rows="3" required></textarea>
+    </div>
+    
+    <button type="submit" class="btn btn-primary">Enviar</button>
+    
+</form>

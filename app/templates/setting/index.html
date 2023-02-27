@@ -1,0 +1,36 @@
+{% extends "setting/base.html" %}
+{% block title %}{{super()}}{% endblock %}
+{%block main%}
+<main>
+    <section class="card m-2">
+        <article class="card-body">
+            <h4 class="card-title text-center">Cambiar Portada principal y Foto de Perfil </h4>
+            {% include 'setting/form_image.html' %}
+        </article>
+    </section>
+    <section class="card m-2">
+        <article class="card-body">
+            <h4 class="card-title text-center">Agregar nueva Profesion</h4>
+            {% include 'setting/form_profesion.html' %}
+        </article>
+    </section>
+    <section class="card m-2">
+        <article class="card-body">
+            <h4 class="card-title text-center">Cambiar Descripcion del Perfil</h4>
+            {% include 'setting/form_description_perfil.html' %}
+        </article>
+    </section>
+    <section class="card m-2">
+        <article class="card-body">
+            <h4 class="card-title text-center">Agregar Proyecto realizado</h4>
+            {% include 'setting/form_works.html' %}
+        </article>
+    </section>
+    <section class="card m-2">
+        <article class="card-body">
+            <h4 class="card-title text-center">Agregar nuevo Curso</h4>
+            {% include 'setting/form_course.html' %}
+        </article>
+    </section>
+</main>
+{%endblock%}

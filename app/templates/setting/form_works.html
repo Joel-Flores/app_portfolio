@@ -1,0 +1,28 @@
+<form action="/prueba" method="POST" enctype="multipart/form-data">
+
+  <select class="form-select form-select-lg mb-3 m-2" aria-label=".form-select-lg" name="type_app">
+    <option selected>Tipo de Proyecto</option>
+    <option value="1">App</option>
+    <option value="2">Web</option>
+    <option value="3">Card</option>
+  </select>
+
+    <div class="form-floating m-2">
+      <label for="titulo">Titulo del proyecto</label>
+      <input type="text" class="form-control" id="titulo" name="titulo" required>
+    </div>
+    <div class="form-floating m-2">
+      <label for="proyecto">Enlace del proyecto</label>
+      <input type="email" class="form-control" id="proyecto" name="proyecto" required>
+    </div>
+    <div class="form-floating m-2">
+      <label for="descripcion">descripcion del proyecto</label>
+      <textarea class="form-control" id="descripcion" name="descripcion" rows="3" required></textarea>
+    </div>
+    <div class="mb-3 m-2">
+        <label for="formImagePortada" class="form-label">Subir imagen de Portada</label>
+        <input class="form-control" type="file" id="formImage" name="formImagePortada" accept="image/*">
+    </div>
+    
+    <button type="submit" class="btn btn-primary">Enviar</button>
+</form>

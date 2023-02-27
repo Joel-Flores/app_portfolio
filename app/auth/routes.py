@@ -1,7 +1,7 @@
 from . import auth
-
+from flask import redirect, url_for
 
 @auth.route('/login')
-def citys():
+def login():
     
-    return 'dentro a la funcion'
+    return redirect(url_for('setting.index'))
