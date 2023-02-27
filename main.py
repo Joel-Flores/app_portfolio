@@ -1,6 +1,6 @@
 from app import create_app
 from flask import render_template,request,redirect,url_for, flash, jsonify
-from app.modules import details_portfolio
+from app.personal_informacion import details_portfolio
 import os
 
 app = create_app()
