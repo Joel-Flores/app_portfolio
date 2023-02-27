@@ -53,11 +53,11 @@
 {% macro render_list_works(works) %}
     {% for work in works %}
             <article class="col-lg-4 col-md-6 portfolio-item filter-{{work.tipo}}">
-                <img src="{{url_for ('static', filename = work.archivos)}}" class="img-fluid" alt=""/>
+                <img src="{{url_for ('static', filename = work.archivos.0)}}" class="img-fluid" alt=""/>
                 <div class="portfolio-info">
                     <h4>{{work.titulo}}</h4>
                     <p>{{work.descripcion}}</p>
-                    <a href="{{url_for ('static', filename = work.archivos)}}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="{{work.titulo}}"><i class="bx bx-plus"></i></a>
+                    <a href="{{url_for ('static', filename = work.archivos.1)}}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="{{work.titulo}}"><i class="bx bx-plus"></i></a>
                     <a href="{{work.url_proyecto}}" class="details-link" title="More Details" ><i class="bx bx-link"></i ></a>
                 </div>
             </article>
@@ -79,14 +79,3 @@
                 </article>
     {% endfor %}
 {% endmacro %}
-<div class="journal-info">
-    <a href="blog-single.html"><img src="{{url_for('static', filename='assets/img/blog-post-1.jpg')}}" class="img-responsive" alt="img"/></a>
-    <div class="journal-txt">
-        <h4 class="h4">
-        <a href="blog-single.html">TRAVELS</a>
-        </h4>
-        <p class="separator">
-        The world is like a book, and who does not travel, only reads a page
-        </p>
-    </div>
-</div>

@@ -10,8 +10,9 @@ def _traer_imagenes(datos):
     for dato in datos:
         ruta = os.path.join(os.getcwd(), 'app', 'static', 'images', 'portfolio', dato['titulo'])
         archivos = os.listdir(ruta)
+        ruta = list()
         for archivo in archivos:
-            ruta = f'images/portfolio/{dato["titulo"]}/{archivo}'
+            ruta.append(f'images/portfolio/{dato["titulo"]}/{archivo}')
             dato['archivos'] = ruta
     return datos
 
