@@ -1,4 +1,4 @@
-<form action="/setting/Proyecto" method="POST" enctype="multipart/form-data">
+<form action="/setting/proyecto" method="POST" enctype="multipart/form-data">
 
   <select class="form-select form-select-lg mb-3 m-2" aria-label=".form-select-lg" name="type_app">
     <option selected>Tipo de Proyecto</option>
@@ -17,12 +17,15 @@
     </div>
     <div class="form-floating m-2">
       <label for="descripcion">descripcion del proyecto</label>
-      <textarea class="form-control" id="descripcion" name="descripcion" rows="3" required></textarea>
+      <textarea class="form-control" id="descripcion" name="descripcion" required></textarea>
     </div>
     <div class="mb-3 m-2">
         <label for="formImagePortada" class="form-label">Subir imagen de Portada</label>
-        <input class="form-control" type="file" id="formImage" name="formImagePortada" accept="image/*">
+        <input class="form-control" type="file" id="formImagePortada" name="formImagePortada" accept="image/*">
     </div>
-    
+    <div class="mb-3 m-2">
+      <label for="formImageSecundario" class="form-label">Subir imagen de Secundario</label>
+      <input class="form-control" type="file" id="formImageSecundario" name="formImageSecundario" accept="image/*">
+    </div>
     <button type="submit" class="btn btn-primary">Enviar</button>
 </form>
