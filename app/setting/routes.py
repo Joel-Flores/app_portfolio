@@ -1,6 +1,6 @@
 from . import setting
 from flask import render_template, url_for, redirect
-from . import route_images, route_profesion, route_description, route_curse, route_proyecto, route_icon, route_social
+from . import route_images, route_profesion, route_description, route_curse, route_proyecto, route_icon, route_social, route_personal_informacion
 
 @setting.route('/')
 def index():
@@ -39,4 +39,9 @@ def icon():
 @setting.route('/social', methods = ['POST'])
 def social():
     route_social.function()
+    return redirect(url_for('setting.index'))
+
+@setting.route('/personal', methods = ['POST'])
+def personal():
+    route_personal_informacion.function()
     return redirect(url_for('setting.index'))
