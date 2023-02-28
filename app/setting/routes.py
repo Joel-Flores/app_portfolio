@@ -1,6 +1,6 @@
 from . import setting
 from flask import render_template, url_for, redirect
-from . import route_images, route_profesion, route_description
+from . import route_images, route_profesion, route_description, route_curse
 
 @setting.route('/')
 def index():
@@ -27,6 +27,7 @@ def Proyecto():
 
 @setting.route('/curse', methods = ['POST'])
 def curse():
+    route_curse.function()
     return redirect(url_for('setting.index'))
 
 
