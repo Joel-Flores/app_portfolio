@@ -1,16 +1,19 @@
-
+{% extends "setting/index.html" %}
+{% block title %}{{super()}}{% endblock %}
+{%block div%}
 <section class="card m-2 bg-dark text-white border border-light">
     <article class="card-body">
-        <h4 class="card-title text-center">Agregar nueva Profesion </h4>
+        <h4 class="card-title text-center">{{'Agregar nueva Profesion'.upper()}}</h4>
             <form action="/setting/profesion" class="form-floating text-dark" method="POST">
 
                 <div class="form-floating mb-3  m-2">
                     <input type="text" class="form-control" name="profesion" required>
-                    <label for="floatingInput">Nueva Profesion</label>
+                    <label class="text-dark" for="floatingInput">{{'Nueva Profesion'.upper()}}</label>
                 </div>
                 
-                <button type="submit" class="btn btn-secondary m-2">Enviar</button>
+                <button type="submit" class="btn btn-secondary m-2">{{'Enviar'.upper()}}</button>
                 
             </form>
     </article>
 </section>
+{%endblock%}

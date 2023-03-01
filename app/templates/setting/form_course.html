@@ -1,25 +1,29 @@
+{% extends "setting/index.html" %}
+{% block title %}{{super()}}{% endblock %}
+{%block div%}
 <section class="card m-2 bg-dark text-white border border-light">
   <article class="card-body">
-      <h4 class="card-title text-center">Agregar nuevo Curso</h4>
+      <h4 class="card-title text-center">{{'Agregar nuevo Curso'.upper()}}</h4>
       <form action="/setting/curse" class="form-floating text-dark"  method="POST" enctype="multipart/form-data">
   
         <div class="form-floating mb-3  m-2">
           <input type="text" class="form-control" name="titulo" required>
-          <label for="floatingInput">Titulo del curso</label>
+          <label class="text-dark" for="floatingInput">{{'Titulo del curso'.upper()}}</label>
         </div>
       
         <div class="form-floating m-2">
           <input type="text" class="form-control" name="url" required>
-          <label for="floatingInput">Enlace del Curso</label>
+          <label class="text-dark" for="floatingInput">{{'Enlace del Curso'.upper()}}</label>
         </div>
         
         <div class="mb-3 m-2">
-          <label class="form-label text-white" >Select an SVG file:</label>
+          <label class="text-dark" class="form-label text-white">{{'Select an SVG file:'.upper()}}</label>
           <input type="file" class="form-control" id="svgFile" name="svgFile" accept="image/svg+xml" required>
         </div>
         
-        <button type="submit" class="btn btn-secondary m-2">Enviar</button>
+        <button type="submit" class="btn btn-secondary m-2">{{'Enviar'.upper()}}</button>
       
       </form>
   </article>
 </section>
+{%endblock%}

@@ -1,20 +1,24 @@
+{% extends "setting/index.html" %}
+{% block title %}{{super()}}{% endblock %}
+{%block div%}
 <section class="card m-2 bg-dark text-white border border-light">
     <article class="card-body">
-        <h4 class="card-title text-center">Cambiar Portada principal y Foto de Perfil </h4>
+        <h4 class="card-title text-center">{{'Cambiar Portada principal y Foto de Perfil'.upper()}}</h4>
             <form action="/setting/images" class="form-floating text-white" method="POST" enctype="multipart/form-data">
         
                 <div class="mb-3 m-2">
-                    <label class="form-label">Subir imagen de Portada</label>
+                    <label class="form-label">{{'Subir imagen de Portada'.upper()}}</label>
                     <input class="form-control" type="file" name="formImagePortada" accept="image/*">
                 </div>
                 
                 <div class="mb-3 m-2">
-                    <label class="form-label">Subir imagen de Perfil</label>
+                    <label class="form-label">{{'Subir imagen de Perfil'.upper()}}</label>
                     <input class="form-control" type="file" name="formImagePerfil" accept="image/*">
                 </div>
             
-                <button type="submit" class="btn btn-secondary m-2">Enviar</button>
+                <button type="submit" class="btn btn-secondary m-2">{{'Enviar'.upper()}}</button>
                 
             </form>
     </article>
 </section>
+{%endblock%}

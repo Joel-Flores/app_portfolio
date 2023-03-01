@@ -1,42 +1,46 @@
+{% extends "setting/index.html" %}
+{% block title %}{{super()}}{% endblock %}
+{%block div%}
 <section class="card m-2 bg-dark text-white border border-light">
   <article class="card-body">
-    <h4 class="card-title text-center">Agregar Proyecto realizado</h4>
+    <h4 class="card-title text-center">{{'Agregar Proyecto realizado'.upper()}}</h4>
       <form action="/setting/proyecto" class="form-floating text-dark" method="POST" enctype="multipart/form-data">
 
         <select class="form-select form-select-lg mb-3 m-2" aria-label=".form-select" name="type_app">
-          <option selected>Tipo de Proyecto</option>
-          <option value="1">App</option>
-          <option value="2">Web</option>
-          <option value="3">Card</option>
+          <option selected>{{'Tipo de Proyecto'.upper()}}</option>
+          <option class="text-dark" value="1">{{'app'.upper()}}</option>
+          <option class="text-dark" value="2">{{'web'.upper()}}</option>
+          <option class="text-dark" value="3">{{'card'.upper()}}</option>
         </select>
     
         <div class="form-floating m-2">
           <input type="text" class="form-control" name="titulo" required>
-          <label for="floatingInput">Titulo del proyecto</label>
+          <label class="text-dark" for="floatingInput">{{'Titulo del proyecto'.upper()}}</label>
         </div>
     
         <div class="form-floating m-2">
           <input type="text" class="form-control"  name="proyecto" required>
-          <label for="floatingInput">Enlace del proyecto</label>
+          <label class="text-dark" for="floatingInput">{{'Enlace del proyecto'.upper()}}</label>
         </div>
     
         <div class="form-floating m-2">
           <textarea class="form-control" name="descripcion" required></textarea>
-          <label for="floatingInput">descripcion del proyecto</label>
+          <label class="text-dark" for="floatingInput">{{'descripcion del proyecto'.upper()}}</label>
         </div>
     
         <div class="mb-3 m-2">
-            <label class="form-label text-white">Subir imagen de Portada</label>
+            <label class="form-label text-darke">{{'Subir imagen de Portada'.upper()}}</label>
             <input class="form-control" type="file" name="formImagePortada" accept="image/*">
         </div>
     
         <div class="mb-3 m-2">
-          <label class="form-label text-white">Subir imagen de Secundario</label>
+          <label class="form-label text-white">{{'Subir imagen de Secundario'.upper()}}</label>
           <input class="form-control" type="file" name="formImageSecundario" accept="image/*">
         </div>
     
-        <button type="submit" class="btn btn-secondary m-2">Enviar</button>
+        <button type="submit" class="btn btn-secondary m-2">{{'Enviar'.upper()}}</button>
         
       </form>
   </article>
 </section>
+{%endblock%}

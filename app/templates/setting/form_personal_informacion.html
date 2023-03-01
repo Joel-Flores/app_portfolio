@@ -1,35 +1,39 @@
+{% extends "setting/index.html" %}
+{% block title %}{{super()}}{% endblock %}
+{%block div%}
 <section class="card m-2 bg-dark text-white border border-light">
     <article class="card-body">
-        <h4 class="card-title text-center">datos personales</h4>
+        <h4 class="card-title text-center">{{'datos personales'.upper()}}</h4>
         <form action="/setting/personal" class="form-floating text-dark" method="POST">
 
             <div class="form-floating mb-3  m-2">
                 <input type="text" class="form-control" name="nombre" required>
-                <label for="floatingInput">Nombre</label>
+                <label class="text-black" for="floatingInput">{{'Nombre'.upper()}}</label>
             </div>
         
             <div class="form-floating mb-3  m-2">
                 <input type="text" class="form-control" name="nombre_s">
-                <label for="floatingInput">Segundo Nombre "Opcional"</label>
+                <label class="text-black" for="floatingInput">{{'Segundo Nombre "Opcional"'.upper()}}</label>
             </div>
         
             <div class="form-floating mb-3  m-2">
                 <input type="text" class="form-control" name="apellido" required>
-                <label for="floatingInput">Apellido</label>
+                <label class="text-black" for="floatingInput">{{'Apellido'.upper()}}</label>
             </div>
         
             <div class="form-floating mb-3  m-2">
                 <input type="text" class="form-control" name="apellido_s">
-                <label for="floatingInput">Segundo Apellido "Opcional"</label>
+                <label class="text-black" for="floatingInput">{{'Segundo Apellido "Opcional"'.upper()}}</label>
             </div>
         
             <div class="form-floating mb-3  m-2">
                 <input type="email" class="form-control" name="correo" required>
-                <label for="floatingInput">Correo</label>
+                <label class="text-black" for="floatingInput">{{'correo'.upper()}}</label>
             </div>
         
-            <button type="submit" class="btn btn-secondary m-2">Enviar</button>
+            <button type="submit" class="btn btn-secondary m-2">{{'Enviar'.upper()}}</button>
             
         </form>
     </article>
 </section>
+{%endblock%}

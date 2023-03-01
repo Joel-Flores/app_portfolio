@@ -1,26 +1,29 @@
-
+{% extends "setting/index.html" %}
+{% block title %}{{super()}}{% endblock %}
+{%block div%}
 <section class="card m-2 bg-dark text-white border border-light">
     <article class="card-body">
-        <h4 class="card-title text-center">Cambiar Descripcion del Perfil</h4>
+        <h4 class="card-title text-center">{{'Cambiar Descripcion del Perfil'.upper()}}</h4>
             <form action="/setting/description" class="form-floating text-dark" method="POST">
 
                 <div class="form-floating mb-3  m-2">
                     <input type="text" class="form-control" name="titulo" required>
-                    <label for="floatingInput">Titulo de la description</label>
+                    <label class="text-dark" for="floatingInput">{{'Titulo de la description'.upper()}}</label>
                 </div>
             
                 <div class="form-floating mb-3  m-2">
                     <textarea class="form-control" name="principal" required></textarea>
-                    <label for="floatingInput">Parrafo principal</label>
+                    <label class="text-dark" for="floatingInput">{{'Parrafo "principal"'.upper()}}</label>
                 </div>
             
                 <div class="form-floating mb-3  m-2">
                     <textarea class="form-control" name="Opcional" required></textarea>
-                    <label for="floatingInput">Parrafo "Opcional"</label>
+                    <label class="text-dark" for="floatingInput">{{'Parrafo "Opcional"'.upper()}}</label>
                 </div>
                 
-                <button type="submit" class="btn btn-secondary m-2">Enviar</button>
+                <button type="submit" class="btn btn-secondary m-2">{{'Enviar'.upper()}}</button>
                 
             </form>
     </article>
 </section>
+{%endblock%}

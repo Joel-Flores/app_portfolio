@@ -1,15 +1,19 @@
+{% extends "setting/index.html" %}
+{% block title %}{{super()}}{% endblock %}
+{%block div%}
 <section class="card m-2 bg-dark text-white border border-light">
     <article class="card-body">
-        <h4 class="card-title text-center">Agregar icono de la plataforma</h4>
+        <h4 class="card-title text-center">{{'Agregar icono de la plataforma'.upper()}}</h4>
         <form action="/setting/icon" class="form-floating text-white" method="POST" enctype="multipart/form-data">
     
             <div class="mb-3 m-2">
-                <label for="icon_png" class="form-label" >Select an PNG file:</label>
+                <label for="icon_png" class="form-label" >{{'Select an PNG file:'.upper()}}</label>
                 <input type="file" class="form-control" id="icon_png" name="icon_png" accept="image/*" required>
             </div>
         
-            <button type="submit" class="btn btn-secondary m-2">Enviar</button>
+            <button type="submit" class="btn btn-secondary m-2">{{'Enviar'.upper()}}</button>
             
         </form>
     </article>
 </section>
+{%endblock%}
