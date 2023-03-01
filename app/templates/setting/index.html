@@ -45,6 +45,9 @@
           <li class="nav-item">
             <a class="nav-link" href="{{url_for('setting.Proyecto')}}">{{'Agregar Proyectos Realizados'.capitalize()}}</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{url_for('auth.register')}}">{{'Registar usuario'.upper()}}</a>
+          </li>
         </ul>
       </div>
     </div>
@@ -59,8 +62,7 @@
     <h1>AJUSTES</h1>
     <h2>DEL SISTEMA</h2>
     <h3>BACK TO HOME?</h3>
-    <a href="{{url_for('index')}}" class="yes">YES</a>
-    <a href="{{url_for('auth.login')}}">NO</a>
+    <a href="{{url_for('auth.logout')}}" class="yes">YES</a>
   </div>
 </section>
 
