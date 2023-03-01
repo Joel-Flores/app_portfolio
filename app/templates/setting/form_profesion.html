@@ -1,10 +1,16 @@
-<form action="/setting/profesion" method="POST">
 
-    <div class="form-floating mb-3  m-2">
-        <label for="nombre">Nueva Profesion</label>
-        <input type="text" class="form-control" id="nombre" name="profesion" required>
-    </div>
-    
-    <button type="submit" class="btn btn-primary">Enviar</button>
-    
-</form>
+<section class="card m-2 bg-dark text-white border border-light">
+    <article class="card-body">
+        <h4 class="card-title text-center">Agregar nueva Profesion </h4>
+            <form action="/setting/profesion" class="form-floating text-dark" method="POST">
+
+                <div class="form-floating mb-3  m-2">
+                    <input type="text" class="form-control" name="profesion" required>
+                    <label for="floatingInput">Nueva Profesion</label>
+                </div>
+                
+                <button type="submit" class="btn btn-secondary m-2">Enviar</button>
+                
+            </form>
+    </article>
+</section>

@@ -1,15 +1,20 @@
-<form action="/setting/images" method="POST" enctype="multipart/form-data">
-    
-    <div class="mb-3 m-2">
-        <label for="formImagePortada" class="form-label">Subir imagen de Portada</label>
-        <input class="form-control" type="file" id="formImage" name="formImagePortada" accept="image/*">
-    </div>
-      
-    <div class="mb-3 m-2">
-        <label for="formImagePerfil" class="form-label">Subir imagen de Perfil</label>
-        <input class="form-control" type="file" id="formImage" name="formImagePerfil" accept="image/*">
-    </div>
-
-    <button type="submit" class="btn btn-primary">Enviar</button>
-    
-</form>
+<section class="card m-2 bg-dark text-white border border-light">
+    <article class="card-body">
+        <h4 class="card-title text-center">Cambiar Portada principal y Foto de Perfil </h4>
+            <form action="/setting/images" class="form-floating text-white" method="POST" enctype="multipart/form-data">
+        
+                <div class="mb-3 m-2">
+                    <label class="form-label">Subir imagen de Portada</label>
+                    <input class="form-control" type="file" name="formImagePortada" accept="image/*">
+                </div>
+                
+                <div class="mb-3 m-2">
+                    <label class="form-label">Subir imagen de Perfil</label>
+                    <input class="form-control" type="file" name="formImagePerfil" accept="image/*">
+                </div>
+            
+                <button type="submit" class="btn btn-secondary m-2">Enviar</button>
+                
+            </form>
+    </article>
+</section>

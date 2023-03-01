@@ -1,20 +1,26 @@
-<form action="/setting/description" method="POST">
 
-    <div class="form-floating mb-3  m-2">
-        <label for="nombre">Titulo de la description</label>
-        <input type="text" class="form-control" id="nombre" name="titulo" required>
-    </div>
+<section class="card m-2 bg-dark text-white border border-light">
+    <article class="card-body">
+        <h4 class="card-title text-center">Cambiar Descripcion del Perfil</h4>
+            <form action="/setting/description" class="form-floating text-dark" method="POST">
 
-    <div class="form-floating mb-3  m-2">
-        <label for="principal">Parrafo principal</label>
-        <textarea class="form-control" id="principal" name="principal" required></textarea>
-    </div>
-
-    <div class="form-floating mb-3  m-2">
-        <label for="Opcional">Parrafo "Opcional"</label>
-        <textarea class="form-control" id="Opcional" name="Opcional" required></textarea>
-    </div>
-    
-    <button type="submit" class="btn btn-primary">Enviar</button>
-    
-</form>
+                <div class="form-floating mb-3  m-2">
+                    <input type="text" class="form-control" name="titulo" required>
+                    <label for="floatingInput">Titulo de la description</label>
+                </div>
+            
+                <div class="form-floating mb-3  m-2">
+                    <textarea class="form-control" name="principal" required></textarea>
+                    <label for="floatingInput">Parrafo principal</label>
+                </div>
+            
+                <div class="form-floating mb-3  m-2">
+                    <textarea class="form-control" name="Opcional" required></textarea>
+                    <label for="floatingInput">Parrafo "Opcional"</label>
+                </div>
+                
+                <button type="submit" class="btn btn-secondary m-2">Enviar</button>
+                
+            </form>
+    </article>
+</section>

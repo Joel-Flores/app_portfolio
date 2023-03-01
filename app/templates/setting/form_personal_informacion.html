@@ -1,30 +1,35 @@
-<form action="/setting/personal" method="POST">
+<section class="card m-2 bg-dark text-white border border-light">
+    <article class="card-body">
+        <h4 class="card-title text-center">datos personales</h4>
+        <form action="/setting/personal" class="form-floating text-dark" method="POST">
 
-    <div class="form-floating mb-3  m-2">
-        <label for="nombre">Nombre</label>
-        <input type="text" class="form-control" id="nombre" name="nombre" required>
-    </div>
-
-    <div class="form-floating mb-3  m-2">
-        <label for="nombre_s">Segundo Nombre "Opcional"</label>
-        <input type="text" class="form-control" id="nombre_s" name="nombre_s">
-    </div>
-
-    <div class="form-floating mb-3  m-2">
-        <label for="apellido">Apellido</label>
-        <input type="text" class="form-control" id="apellido" name="apellido" required>
-    </div>
-
-    <div class="form-floating mb-3  m-2">
-        <label for="apellido_s">Segundo Apellido "Opcional"</label>
-        <input type="text" class="form-control" id="apellido_s" name="apellido_s">
-    </div>
-
-    <div class="form-floating mb-3  m-2">
-        <label for="correo">Correo</label>
-        <input type="email" class="form-control" id="correo" name="correo" required>
-    </div>
-
-    <button type="submit" class="btn btn-primary">Enviar</button>
-    
-</form>
+            <div class="form-floating mb-3  m-2">
+                <input type="text" class="form-control" name="nombre" required>
+                <label for="floatingInput">Nombre</label>
+            </div>
+        
+            <div class="form-floating mb-3  m-2">
+                <input type="text" class="form-control" name="nombre_s">
+                <label for="floatingInput">Segundo Nombre "Opcional"</label>
+            </div>
+        
+            <div class="form-floating mb-3  m-2">
+                <input type="text" class="form-control" name="apellido" required>
+                <label for="floatingInput">Apellido</label>
+            </div>
+        
+            <div class="form-floating mb-3  m-2">
+                <input type="text" class="form-control" name="apellido_s">
+                <label for="floatingInput">Segundo Apellido "Opcional"</label>
+            </div>
+        
+            <div class="form-floating mb-3  m-2">
+                <input type="email" class="form-control" name="correo" required>
+                <label for="floatingInput">Correo</label>
+            </div>
+        
+            <button type="submit" class="btn btn-secondary m-2">Enviar</button>
+            
+        </form>
+    </article>
+</section>
