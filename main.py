@@ -1,9 +1,12 @@
 from app import create_app
+from flask_mail import Mail
 from flask import render_template,request,redirect,url_for, flash, session
 from app.personal_informacion import details_portfolio
-import os
+from app.email import send
+
 
 app = create_app()
+mail = Mail(app)
 
 @app.errorhandler(404)
 def page_not_found(error):
@@ -16,9 +19,9 @@ def internal_server_error(error):
     return render_template('error/error_500.html', error = error)
 
 @app.route('/email', methods = ['POST'])
-def blog():
+def email():
     if request.method == 'POST':
-        flash('Mensaje Enviado')
+        send(app, mail)
         return redirect(url_for('index'))
 
 @app.route('/blog')
@@ -28,5 +31,6 @@ def blogs():
 
 @app.route('/')
 def index():
-    session.clear()
+    if session.get('user'):
+        session.clear()
     return render_template('principal/index.html', json = details_portfolio())
