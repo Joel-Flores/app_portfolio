@@ -7,8 +7,13 @@
         <form action="/setting/icon" class="form-floating text-white" method="POST" enctype="multipart/form-data">
     
             <div class="mb-3 m-2">
-                <label for="icon_png" class="form-label" >{{'Select an PNG file:'.upper()}}</label>
+                <label class="form-label" >{{'seleciona icono de la web:'.upper()}}</label>
                 <input type="file" class="form-control" id="icon_png" name="icon_png" accept="image/*" required>
+            </div>
+        
+            <div class="mb-3 m-2">
+                <label class="form-label" >{{'selecciona icono de la barra de navegacion'.upper()}}</label>
+                <input type="file" class="form-control" id="icon_png" name="icon_navbar" accept="image/*" required>
             </div>
         
             <button type="submit" class="btn btn-secondary m-2">{{'Enviar'.upper()}}</button>

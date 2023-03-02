@@ -68,6 +68,9 @@ def curse():
 @login_required
 def Proyecto():
     if request.method == 'POST':
-        route_proyecto.function()
+        error = route_proyecto.function()
+        if error is None:
+            return redirect(url_for('setting.index'))
+        flash(error)
         return redirect(url_for('setting.index'))
     return render_template('setting/form_works.html')

@@ -16,7 +16,7 @@ def file(proyecto, img_1, img_2):
 def function():
     # Obtiene una conexión y un cursor a la base de datos a través de la función get_db().
     db, c = get_db()
-    
+    error = None
     # Obtiene los datos enviados por el usuario a través del formulario web.
     type_app = request.form['type_app']
     titulo = request.form['titulo']
@@ -27,12 +27,12 @@ def function():
     secundario = request.files.get('formImageSecundario')
     
     # Verifica que los campos requeridos no estén vacíos.
-    if not type_app and not titulo and not url and not descripcion and not portada and not secundario:
-        flash('Los campos no se llenaron correctamente')
-        return
-    
-    # Guarda las imágenes del proyecto en la carpeta correspondiente.
-    file(titulo, portada, secundario)
+    if type_app == 'TIPO DE PROYECTO':
+        error = 'no se designo un trabajo especifico app, web, card'
+        return error
+    if not titulo or not url or not descripcion or not portada or not secundario:
+        error ='Los campos no se llenaron correctamente'
+        return error
     
     # Define la consulta SQL para insertar un nuevo proyecto en la base de datos.
     sql = 'INSERT INTO trabajos(titutlo, descripcion, url_proyecto, type) VALUES(%s, %s, %s, %s)'
@@ -45,6 +45,9 @@ def function():
     
     # Guarda los cambios en la base de datos.
     db.commit()
+    
+    # Guarda las imágenes del proyecto en la carpeta correspondiente.
+    file(titulo, portada, secundario)
     
     # Muestra un mensaje flash para el usuario indicando que el proyecto se ha agregado con éxito.
     flash('Proyecto agregado')

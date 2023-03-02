@@ -1,13 +1,7 @@
 from . import auth
 from . import route_login, route_register
-from flask import render_template, redirect, url_for, request, session, flash, g
+from flask import render_template, redirect, url_for, request, session, flash, g, abort
 import functools
-
-@auth.route('/register', methods = ['GET','POST'])
-def register():
-    if request.method == 'POST':
-        return route_register.post_register()
-    return route_register.get_register()
 
 @auth.route('/login', methods = ['GET', 'POST'])
 def login():
@@ -38,3 +32,10 @@ def login_required(view):
             return redirect(url_for('auth.login'))
         return view(**kwargs)
     return wrapped_view
+
+@auth.route('/register', methods = ['GET','POST'])
+@login_required
+def register():
+    if request.method == 'POST':
+        return route_register.post_register()
+    return route_register.get_register()

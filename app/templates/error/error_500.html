@@ -1,8 +1,8 @@
 {% extends 'auth/base.html'%}
 {% block title %}{{'Registarse'.capitalize()}}{% endblock %}
 {%block div%}
-    <h1>404</h1>
-    <h2>{{'page not found.'.upper()}}</h2>
+    <h1>500</h1>
+    <h2>{{'internal server error'.upper()}}</h2>
     <h3>{{'back to home?'.upper()}}</h3>
-    <a href="{{url_for('index')}}" class="yes">{{'yes'.upper()}}</a>
+    <a href="{{url_for('index')}}" class="yes">{{'YES'.upper()}}</a>
 {%endblock%}
