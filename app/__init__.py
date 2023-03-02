@@ -1,4 +1,3 @@
-import code
 from flask import Flask
 import os
 

@@ -1,6 +1,6 @@
 from . import auth
 from . import route_login, route_register
-from flask import render_template, redirect, url_for, request, session, flash, g, abort
+from flask import redirect, url_for, request, session, flash, g
 import functools
 
 @auth.route('/login', methods = ['GET', 'POST'])

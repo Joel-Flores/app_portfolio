@@ -21,7 +21,7 @@ def internal_server_error(error):
 @app.route('/email', methods = ['POST'])
 def email():
     if request.method == 'POST':
-        send(app, mail)
+        send(mail)
         return redirect(url_for('index'))
 
 @app.route('/blog')
